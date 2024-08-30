@@ -29,7 +29,7 @@ public class PersonDaoImpl implements PersonDao {
     public Person persist(Person person) {
         if (person.getId() != 0) throw new IllegalStateException("Invalid state person.id was not 0 or null");
         if (findByEmail(person.getEmail()) != null) {
-            throw new IllegalStateException("Email " + person.getEmail() + " is already taken");
+            throw new IllegalStateException("Email " + person.getEmail() + " is taken");
         }
         person.setId(PersonSequencer.nextId());
         people.add(person);
