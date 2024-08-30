@@ -26,15 +26,18 @@ public class TodoItem {
     }
 
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
     public String getTitle() {
-        return title;
+
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -43,14 +46,17 @@ public class TodoItem {
     }
 
     public String getDescription() {
+
         return description;
     }
 
     public void setDescription(String description) {
+
         this.description = description;
     }
 
     public LocalDate getDeadLine() {
+
         return deadLine;
     }
 
@@ -60,14 +66,17 @@ public class TodoItem {
     }
 
     public boolean isDone() {
+
         return done;
     }
 
     public void setDone(boolean done) {
+
         this.done = done;
     }
 
     public Person getCreator() {
+
         return creator;
     }
 
@@ -80,10 +89,11 @@ public class TodoItem {
         return LocalDate.now().isAfter(deadLine);
 
     }
+
     public String getSummary() {
         String todoItemSummary = "TodoItem ID: " + getId() + " Title: " + getTitle() + " Description: " + getTaskDescription() +
                 " Deadline: " + getDeadLine() + "\nCreator Details: ";
-        if(getCreator() != null) {
+        if (getCreator() != null) {
             todoItemSummary += getCreator().getSummary() + "\n";
         } else {
             todoItemSummary += "Creator Detail is not present\n";
@@ -92,6 +102,7 @@ public class TodoItem {
     }
 
     private String getTaskDescription() {
+
         return description;
     }
 
@@ -105,6 +116,7 @@ public class TodoItem {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(id, title, description, deadLine, done, creator);
     }
 

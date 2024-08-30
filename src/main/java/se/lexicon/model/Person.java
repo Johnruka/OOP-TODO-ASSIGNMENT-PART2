@@ -28,8 +28,8 @@ public class Person {
         this.id = id;
     }
 
-    public Integer getId() {
-        return id;
+    public static Integer getId() {
+        return getId();
     }
 
     public void setId(Integer id) {
