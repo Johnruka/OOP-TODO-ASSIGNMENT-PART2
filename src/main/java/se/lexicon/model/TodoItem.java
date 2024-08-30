@@ -38,7 +38,7 @@ public class TodoItem {
     }
 
     public void setTitle(String title) {
-        if (title == null || title.trim().isEmpty()) throw new IllegalArgumentException("title is null or empty.");
+        if (title == null || title.trim().isEmpty()) throw new IllegalArgumentException("title is empty.");
         this.title = title;
     }
 
@@ -55,7 +55,7 @@ public class TodoItem {
     }
 
     public void setDeadLine(LocalDate deadLine) {
-        if (deadLine == null) throw new IllegalArgumentException("deadLine is null.");
+        if (deadLine == null) throw new IllegalArgumentException("deadLine is empty.");
         this.deadLine = deadLine;
     }
 
@@ -72,7 +72,7 @@ public class TodoItem {
     }
 
     public void setCreator(Person creator) {
-        if (creator == null) throw new IllegalArgumentException("creator is null.");
+        if (creator == null) throw new IllegalArgumentException("creator is empty.");
         this.creator = creator;
     }
 
