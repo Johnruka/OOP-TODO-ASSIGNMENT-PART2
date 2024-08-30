@@ -18,9 +18,7 @@ public class AppUser {
         return username;
     }
 
-    /**
-     * @param username unique String <b>Not null or blank</b>
-     */
+
     public void setUsername(String username) {
         if (username == null || username.trim().isEmpty()) throw new IllegalArgumentException("username is null or empty.");
         this.username = username;
@@ -30,9 +28,7 @@ public class AppUser {
         return password;
     }
 
-    /**
-     * @param password String representing AppUser password
-     */
+
     public void setPassword(String password) throws IllegalArgumentException {
         if (password == null || password.trim().isEmpty()) throw new IllegalArgumentException("password is null or empty.");
         this.password = password;
