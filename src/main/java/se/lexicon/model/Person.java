@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Person {
 
-    private Integer id;
+    private static Integer id;
     private String firstName;
     private String lastName;
     private String email;
@@ -13,11 +13,12 @@ public class Person {
 
     public Person() {
     }
+
     public Person(String firstName, String lastName, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
-}
+    }
 
     public Person(String firstName, String lastName, String email, AppUser credentials) {
         setFirstName(firstName);
@@ -33,12 +34,10 @@ public class Person {
         this.id = id;
 
 
-}
-
-
+    }
 
     public static Integer getId() {
-        return getId();
+        return id;
     }
 
     public void setId(Integer id) {
@@ -84,6 +83,7 @@ public class Person {
         this.credentials = credentials;
 
     }
+
     public String getSummary() {
         return "Person ID: " + getId() + " Name: " + getFirstName() + " " + getLastName() + " Email: " + getEmail();
     }
