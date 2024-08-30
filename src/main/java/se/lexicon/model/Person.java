@@ -52,7 +52,7 @@ public class Person {
 
     public void setLastName(String lastName) {
         if (lastName == null || lastName.trim().isEmpty())
-            throw new IllegalArgumentException("lastName is null or empty.");
+            throw new IllegalArgumentException("lastName is empty.");
         this.lastName = lastName;
     }
 
@@ -62,7 +62,7 @@ public class Person {
 
     public void setEmail(String email) {
         if (email == null || email.trim().isEmpty())
-            throw new IllegalArgumentException("email is null or empty.");
+            throw new IllegalArgumentException("email is empty.");
         this.email = email;
     }
 
