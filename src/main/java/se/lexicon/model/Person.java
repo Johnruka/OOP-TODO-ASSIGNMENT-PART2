@@ -13,6 +13,11 @@ public class Person {
 
     public Person() {
     }
+    public Person(String firstName, String lastName, String email) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
+}
 
     public Person(String firstName, String lastName, String email, AppUser credentials) {
         setFirstName(firstName);
@@ -26,7 +31,11 @@ public class Person {
         this(firstName, lastName, email, credentials);
         if (id == null) throw new RuntimeException("id is null");
         this.id = id;
-    }
+
+
+}
+
+
 
     public static Integer getId() {
         return getId();
