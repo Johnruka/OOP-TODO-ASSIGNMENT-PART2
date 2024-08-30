@@ -73,6 +73,10 @@ public class Person {
     public void setCredentials(AppUser credentials) {
         if (credentials == null) throw new IllegalArgumentException("credentials is null.");
         this.credentials = credentials;
+
+    }
+    public String getSummary() {
+        return "Person ID: " + getId() + " Name: " + getFirstName() + " " + getLastName() + " Email: " + getEmail();
     }
 
     @Override
